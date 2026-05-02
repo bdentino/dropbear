@@ -74,6 +74,7 @@ IMPORTANT: Some options will require "make clean" after changes */
 #define DROPBEAR_SVR_LOCALTCPFWD 1
 #define DROPBEAR_SVR_REMOTETCPFWD 1
 #define DROPBEAR_SVR_LOCALSTREAMFWD 1
+#define DROPBEAR_SVR_REMOTESTREAMFWD 1
 
 /* Enable Authentication Agent Forwarding */
 #define DROPBEAR_SVR_AGENTFWD 1
@@ -388,6 +389,10 @@ for runtime configuration please mail the Dropbear list */
 /* Ensure that data is received within IDLE_TIMEOUT seconds. This can
 be overridden at runtime with -I. 0 disables idle timeouts */
 #define DEFAULT_IDLE_TIMEOUT 0
+
+/* Disconnect after MAX_DURATION seconds. This can be overridden at
+runtime with -M. 0 disables this feature. */
+#define DEFAULT_MAX_DURATION 0
 
 /* The default path. This will often get replaced by the shell */
 #define DEFAULT_PATH "/usr/bin:/bin"

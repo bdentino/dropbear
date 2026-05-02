@@ -184,6 +184,14 @@ port specification for matching any port. Hosts must be literal domain names or
 IP addresses.
 
 .TP
+.B permitlisten=\fR"\fIport\fR"
+Restrict remote port forwarding listeners to the given port.
+Multiple permitlisten="port" options separated by commas
+can be set in authorized_keys.
+Port can be 0 to allow the
+listen port to be dynamically allocated on the server.
+
+.TP
 .B command=\fR"\fIforced_command\fR"
 Disregard the command provided by the user and always run \fIforced_command\fR.
 The -c command line option overrides this. See -c documentation for behaviour of
